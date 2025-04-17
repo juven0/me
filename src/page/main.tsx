@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 
 import me from "../assets/images/me.jpg";
+import { projects } from "../data/projects";
+import ProjectCard from "../components/card";
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,51 +58,6 @@ export default function Portfolio() {
     { name: "Go", color: "bg-cyan-500", icon: <Terminal size={16} /> },
     { name: "Java", color: "bg-red-500", icon: <Coffee size={16} /> },
     { name: "C++", color: "bg-purple-500", icon: <Code size={16} /> },
-  ];
-
-  const projects = [
-    {
-      name: "Cloud Decentraliser avec blockchain",
-      tech: "React, Sass, Redux, Nodejs, Expressjs",
-      desc: "API RESTful haute performance pour applications e-commerce",
-      color: "from-cyan-500 to-blue-600",
-    },
-    {
-      name: "Portfolio SPA",
-      tech: "React, TypeScript, Tailwind",
-      desc: "Application monopage responsive avec animations fluides",
-      color: "from-pink-500 to-purple-600",
-    },
-    {
-      name: "Blue Box",
-      tech: "React, Sass, TypeScript, Redux, Nestjs",
-      desc: "Tableau de bord en temps réel pour dispositifs connectés",
-      color: "from-green-500 to-emerald-600",
-    },
-    {
-      name: "Game Life",
-      tech: "React, Tailwind, TypeScript, Socket.io, Nodejs, Express ",
-      desc: "Application mobile pour la gestion financière personnelle",
-      color: "from-amber-500 to-orange-600",
-    },
-    {
-      name: "CodeNexGen",
-      tech: "React, Tailwind, TypeScript, ChadcnUI",
-      desc: "Application mobile pour la gestion financière personnelle",
-      color: "from-amber-500 to-orange-600",
-    },
-    {
-      name: "Front-Week1",
-      tech: "React, Sass",
-      desc: "API RESTful haute performance pour applications e-commerce",
-      color: "from-cyan-500 to-blue-600",
-    },
-    {
-      name: "Didi Doc",
-      tech: "Python, Html, Css",
-      desc: "Application monopage responsive avec animations fluides",
-      color: "from-pink-500 to-purple-600",
-    },
   ];
 
   const skills = [
@@ -388,52 +345,9 @@ export default function Portfolio() {
               </h1>
               <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-blue-500 mb-8"></div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                {projects.map((project, index) => (
-                  <div
-                    key={project.name}
-                    className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-lg overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group"
-                    style={{ animationDelay: `${index * 150}ms` }}
-                  >
-                    <div
-                      className={`h-2 w-full bg-gradient-to-r ${project.color}`}
-                    ></div>
-                    <div className="p-6 border-b border-gray-800">
-                      <div className="flex justify-between items-start mb-4">
-                        <div
-                          className={`w-12 h-12 rounded-lg bg-gradient-to-r ${project.color} flex items-center justify-center`}
-                        >
-                          <Code size={24} className="text-white" />
-                        </div>
-                        <span className="text-xs text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
-                          {project.tech}
-                        </span>
-                      </div>
-                      <h3 className="text-white text-xl font-bold group-hover:text-pink-400 transition-colors duration-300">
-                        {project.name}
-                      </h3>
-                      <p className="text-gray-400 mt-2 text-sm">
-                        {project.desc}
-                      </p>
-                    </div>
-                    <div className="px-6 py-4 flex justify-between items-center">
-                      <button className="text-white flex items-center space-x-2 group-hover:text-pink-400 transition-colors">
-                        <span>Voir détails</span>
-                        <ArrowRight
-                          size={16}
-                          className="transform group-hover:translate-x-1 transition-transform duration-300"
-                        />
-                      </button>
-                      <div className="flex space-x-2">
-                        <button className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink-600 transition-colors duration-300">
-                          <Github size={16} />
-                        </button>
-                        <button className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-colors duration-300">
-                          <ExternalLink size={16} />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+                {projects.map((project) => (
+                  <ProjectCard project={project} key={project.name} />
                 ))}
               </div>
 
@@ -645,18 +559,11 @@ export default function Portfolio() {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="w-full aspect-square rounded-xl bg-gray-800 border-4 border-pink-500 overflow-hidden mx-auto shadow-xl shadow-pink-500/20 hover:shadow-pink-500/40 transition-all duration-500 transform hover:scale-105">
-                        <img
-                          src="/api/placeholder/400/400"
-                          alt="Votre photo"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
 
                       <div className="mt-6 space-y-4">
                         <div className="flex items-center gap-3 text-white">
                           <User className="text-pink-500" size={18} />
-                          <span>Thomas Dupont</span>
+                          <span>BOCQUELIN Eddy Juveno</span>
                         </div>
                         <div className="flex items-center gap-3 text-white">
                           <Briefcase className="text-blue-500" size={18} />
@@ -664,7 +571,7 @@ export default function Portfolio() {
                         </div>
                         <div className="flex items-center gap-3 text-white">
                           <Globe className="text-purple-500" size={18} />
-                          <span>Paris, France</span>
+                          <span>Pari, France</span>
                         </div>
                       </div>
 
@@ -880,7 +787,7 @@ export default function Portfolio() {
         </div>
 
         {/* Footer */}
-        <footer className="absolute bottom-6 left-0 right-0 flex justify-center items-center gap-1 md:gap-8 text-white">
+        <footer className=" font-[Orbitron] absolute bottom-6 left-0 right-0 flex justify-center items-center gap-1 md:gap-8 text-white">
           <button
             onClick={() => changePage("home")}
             className={`px-2 py-1 md:px-4 md:py-2 hover:text-pink-500 transition-colors duration-300 text-sm md:text-base relative group ${
