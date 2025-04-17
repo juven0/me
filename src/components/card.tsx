@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Github, MapPin } from "lucide-react";
 import { Project } from "../types";
 import { techTags } from "../data/projects";
+import { Github } from "lucide-react";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const [isHovered, setIsHovered] = useState(false);
   const [showDesc, setShowDesc] = useState(false);
+
+  // console.log(showDesc)
 
   const getTechTagStyle = (label: string) => {
     const tag = techTags.find(
@@ -18,22 +20,25 @@ export default function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <div className=" relative w-full max-w-md">
+    <div className="relative w-full max-w-md" key={project.name}>
       <div
         className={`absolute  w-full h-full bg-[#a71ca0a1]  opacity-30 rounded-3xl  transition-all duration-700 group-hover:rotate-[35deg]  ${
           isHovered ? "transform rotate-12" : ""
         }`}
       ></div>
       <div
-        className={`absolute  w-full h-full bg-[#26116cae] opacity-40 transition-all duration-500 rounded-3xl group-hover:rotate-[15deg]  ${
-          isHovered ? "transform rotate-8" : ""
+        className={`absolute  w-full h-full bg-[#26116ce6] opacity-40 transition-all duration-500 rounded-3xl group-hover:rotate-[15deg]  ${
+          isHovered ? "transform rotate-6" : ""
         }`}
       ></div>
       <div
-        className={`relative h-full z-10 bg-[#0c1015] rounded-3xl shadow-lg overflow-hidden transition-all duration-500 `}
+        className={`relative h-full z-10 bg-[#0c1015] rounded-3xl  shadow-lg overflow-hidden transition-all duration-500 `}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
+        <div className={` ${showDesc? "opacity-0": ""} w-full h-full box-border p-2 absolute  bg-gradient-to-tr from-pink-600/90 to-blue-600/90  group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center`}>
+          <p className="font-mono">{project.desc}</p>
+        </div>
         <div className="p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center"></div>
@@ -74,7 +79,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 />
               </div>
             </div>
-            <button className="bg-sky-500 hover:bg-sky-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300">
+            <button onClick={()=>{setShowDesc(true)}} className="bg-sky-500 hover:bg-sky-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300" >
               Description
             </button>
           </div>

@@ -2,6 +2,9 @@ import { Project, TechTags } from "../types";
 import frontweek from "../assets/images/front-week.png";
 import codenexgen from "../assets/images/codenexgen.png";
 import transtab from "../assets/images/trans-mintab.png";
+import dididoc from "../assets/images/diddoc.png"
+import bluebox from "../assets/images/bluebox.png"
+import nebula from "../assets/images/nebula.png"
 
 export const projects: Project[] = [
   {
@@ -9,22 +12,24 @@ export const projects: Project[] = [
     tech: "React,Sass,Redux,Node.js,Express",
     desc: "API RESTful haute performance pour applications e-commerce",
     color: "from-cyan-500 to-blue-600",
+    imageUrl: nebula
   },
   {
     name: "Portfolio SPA",
-    tech: "React, TypeScript, Tailwind",
+    tech: "React, TypeScript, Tailwind  ",
     desc: "Application monopage responsive avec animations fluides",
     color: "from-pink-500 to-purple-600",
   },
   {
     name: "Blue Box",
     tech: "React, Sass, TypeScript, Redux, Nestjs",
-    desc: "Tableau de bord en temps réel pour dispositifs connectés",
+    desc: "Conception et développement d'un système permettant le transfert sécurisé de fichiers entre différentes machines.Utilisation de NestJS pour la création de l'API côté serveur et de React pour le développement de l'interface utilisateur.",
     color: "from-green-500 to-emerald-600",
+    imageUrl: bluebox
   },
   {
     name: "Game Life",
-    tech: "React,Tailwind,TypeScript,Socket.io,Nodejs,Express ",
+    tech: "React,Tailwind,TypeScript,Socket.io,Node.js,Express ",
     desc: "Application mobile pour la gestion financière personnelle",
     color: "from-amber-500 to-orange-600",
   },
@@ -51,9 +56,10 @@ export const projects: Project[] = [
   },
   {
     name: "Didi Doc",
-    tech: "Python,HTML5,CSS3",
-    desc: "Application monopage responsive avec animations fluides",
+    tech: "Python,HTML5,CSS3,JavaScript,MySQL",
+    desc: "Développement d’une plateforme pour le partage, lecture, discussion des livre numériques. Développement d’une intelligence artificielle pour la classification, suggestion des livres et des publications. Utilisation de Python, Flask, MySQL pour le développement du partie backend et du modèle de machine Learning. HTML, CSS et Javascript pour la partie frontend.",
     color: "from-pink-500 to-purple-600",
+    imageUrl: dididoc
   },
 ];
 
@@ -79,13 +85,13 @@ export const techTags: TechTags[] = [
   },
   { label: "Next.js", bgColor: "bg-black/10", textColor: "text-black" },
   {
-    label: "Vue.js",
+    label: "MySQL",
     bgColor: "bg-emerald-500/20",
     textColor: "text-emerald-500",
   },
   { label: "Angular", bgColor: "bg-red-600/20", textColor: "text-red-600" },
   {
-    label: "Tailwind CSS",
+    label: "Tailwind",
     bgColor: "bg-sky-400/20",
     textColor: "text-sky-400",
   },
