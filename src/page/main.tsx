@@ -19,6 +19,8 @@ import {
   Globe,
 } from "lucide-react";
 
+import me from "../assets/images/me.jpg";
+
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
@@ -58,8 +60,8 @@ export default function Portfolio() {
 
   const projects = [
     {
-      name: "E-commerce API",
-      tech: "Go, PostgreSQL",
+      name: "Cloud Decentraliser avec blockchain",
+      tech: "React, Sass, Redux, Nodejs, Expressjs",
       desc: "API RESTful haute performance pour applications e-commerce",
       color: "from-cyan-500 to-blue-600",
     },
@@ -70,16 +72,34 @@ export default function Portfolio() {
       color: "from-pink-500 to-purple-600",
     },
     {
-      name: "IoT Dashboard",
-      tech: "Java, MongoDB, WebSockets",
+      name: "Blue Box",
+      tech: "React, Sass, TypeScript, Redux, Nestjs",
       desc: "Tableau de bord en temps réel pour dispositifs connectés",
       color: "from-green-500 to-emerald-600",
     },
     {
-      name: "Finance Tracker",
-      tech: "React Native, Firebase",
+      name: "Game Life",
+      tech: "React, Tailwind, TypeScript, Socket.io, Nodejs, Express ",
       desc: "Application mobile pour la gestion financière personnelle",
       color: "from-amber-500 to-orange-600",
+    },
+    {
+      name: "CodeNexGen",
+      tech: "React, Tailwind, TypeScript, ChadcnUI",
+      desc: "Application mobile pour la gestion financière personnelle",
+      color: "from-amber-500 to-orange-600",
+    },
+    {
+      name: "Front-Week1",
+      tech: "React, Sass",
+      desc: "API RESTful haute performance pour applications e-commerce",
+      color: "from-cyan-500 to-blue-600",
+    },
+    {
+      name: "Didi Doc",
+      tech: "Python, Html, Css",
+      desc: "Application monopage responsive avec animations fluides",
+      color: "from-pink-500 to-purple-600",
     },
   ];
 
@@ -236,14 +256,14 @@ export default function Portfolio() {
                     </h1>
                   </div>
                   <div className="overflow-hidden mt-2">
-                    <p className="text-gray-300 text-lg animate-slideUp animation-delay-200">
+                    <p className="font-mono text-gray-300 text-lg animate-slideUp animation-delay-200">
                       Créateur d'applications web et mobiles de haute qualité
                     </p>
                   </div>
 
                   <div className="mt-6 max-w-md">
                     <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-blue-500 mb-6"></div>
-                    <p className="text-gray-400 animate-fadeIn animation-delay-300">
+                    <p className="font-mono text-gray-400 animate-fadeIn animation-delay-300">
                       Spécialisé dans le développement d'applications modernes,
                       performantes et évolutives. Passionné par les nouvelles
                       technologies et l'innovation.
@@ -258,15 +278,17 @@ export default function Portfolio() {
                   >
                     <ArrowRight />
                   </button>
-                  <p className="text-white self-center">
+                  <p className="font-[Orbitron] text-white self-center">
                     Découvrir mon travail
                   </p>
                 </div>
 
                 {/* Technologies Section - Vertical */}
-                <div className="mt-12 relative z-10">
-                  <p className="text-gray-300 mb-4 font-medium">Technologies</p>
-                  <div className="flex flex-wrap gap-4">
+                <div className="mt-12 relative z-10 flex flex-col items-center">
+                  <p className="text-gray-300 mb-4 font-[Orbitron] font-medium">
+                    Technologies
+                  </p>
+                  <div className="font-mono flex flex-wrap gap-4">
                     {technologies.map((tech) => (
                       <div
                         key={tech.name}
@@ -299,7 +321,7 @@ export default function Portfolio() {
                     {/* Profile photo */}
                     <div className="w-64 h-64 rounded-full bg-gray-800 border-4 border-pink-500 overflow-hidden transition-all duration-500 hover:scale-105 shadow-lg shadow-pink-500/50 z-10 animate-floatUp">
                       <img
-                        src="/api/placeholder/400/400"
+                        src={me}
                         alt="Votre photo"
                         className="w-full h-full object-cover"
                       />
@@ -312,7 +334,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Social Media Icons */}
-                <div className="absolute right-6 top-1/4 flex flex-col space-y-6 text-white">
+                <div className="absolute right-6 top-1/7 flex flex-col space-y-6 text-white">
                   <div className="p-2 bg-gray-900 bg-opacity-70 rounded-full backdrop-blur-sm hover:bg-pink-600 transition-all duration-300 cursor-pointer shadow-lg">
                     <Github
                       size={20}
@@ -360,7 +382,7 @@ export default function Portfolio() {
           {currentPage === "projects" && (
             <div className="p-6 md:p-10 h-full animate-fadeInUp">
               <h1 className="text-white text-4xl font-bold uppercase tracking-wide mb-2">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
+                <span className="font-[Orbitron] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
                   Mes Projets
                 </span>
               </h1>
