@@ -5,21 +5,22 @@ import transtab from "../assets/images/trans-mintab.png";
 import dididoc from "../assets/images/diddoc.png";
 import bluebox from "../assets/images/bluebox.png";
 import nebula from "../assets/images/nebula.png";
+import gamelife from "../assets/images/Capture d’écran 2025-04-18 112424.png";
 
 export const projects: Project[] = [
   {
-    name: "Cloud Decentraliser avec blockchain",
+    name: "Decentralized Cloud with Blockchain",
     tech: "React,Sass,Redux,Node.js,Express",
     desc: "Our decentralized cloud web application is built on the principles of a public blockchain and a peer-to-peer network.It enables users to securely store their data across a distributed network, eliminating reliance on centralized servers.At the same time, individuals can join the network as peer nodes by contributing storage space. In return, they are rewarded for their participation and for supporting the stability and growth of the network.",
     color: "from-cyan-500 to-blue-600",
     imageUrl: nebula,
   },
-  {
-    name: "Portfolio SPA",
-    tech: "React, TypeScript, Tailwind  ",
-    desc: "Application monopage responsive avec animations fluides",
-    color: "from-pink-500 to-purple-600",
-  },
+  //   {
+  //     name: "Portfolio SPA",
+  //     tech: "React, TypeScript, Tailwind  ",
+  //     desc: "Application monopage responsive avec animations fluides",
+  //     color: "from-pink-500 to-purple-600",
+  //   },
   {
     name: "Blue Box",
     tech: "React, Sass, TypeScript, Redux, Nestjs",
@@ -32,6 +33,7 @@ export const projects: Project[] = [
     tech: "React,Tailwind,TypeScript,Socket.io,Node.js,Express ",
     desc: "An online game based on cellular automata, inspired by the work of mathematician John Horton Conway.Players can join game rooms to compete in a strategic challenge: starting from an initial population, each player aims to grow their automaton to achieve the largest final population. The game combines logic, strategy, and mathematical simulation in a competitive and interactive environment.",
     color: "from-amber-500 to-orange-600",
+    imageUrl: gamelife,
   },
   {
     name: "CodeNexGen",

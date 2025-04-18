@@ -23,6 +23,7 @@ import me from "../assets/images/me.jpg";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/card";
 import { categories, getTechTagStyle } from "../data/skill";
+import nebula from "../assets/images/nebula.png";
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -398,7 +399,7 @@ export default function Portfolio() {
                     <div className="md:w-1/2 bg-gradient-to-br from-blue-500/20 to-pink-500/20 p-8 flex items-center justify-center">
                       <div className="w-full h-64 bg-gray-800 rounded-lg flex items-center justify-center relative group overflow-hidden">
                         <img
-                          src="/api/placeholder/600/400"
+                          src={nebula}
                           alt="Project screenshot"
                           className="w-full h-full object-cover"
                         />
@@ -409,7 +410,7 @@ export default function Portfolio() {
                     </div>
                     <div className="md:w-1/2 p-8">
                       <h3 className="text-white text-2xl font-bold">
-                        Plateforme E-learning
+                        Decentralized Cloud with Blockchain
                       </h3>
                       <div className="flex flex-wrap gap-2 mt-3">
                         <span className="text-xs bg-pink-600/30 text-pink-400 px-3 py-1 rounded-full">
@@ -422,14 +423,19 @@ export default function Portfolio() {
                           Node.js
                         </span>
                         <span className="text-xs bg-green-600/30 text-green-400 px-3 py-1 rounded-full">
-                          MongoDB
+                          Redux
                         </span>
                       </div>
                       <p className="text-gray-400 mt-4">
-                        Plateforme complète d'apprentissage en ligne avec
-                        système de cours, quiz interactifs et suivi de
-                        progression. Interface utilisateur moderne et responsive
-                        avec support pour mobile.
+                        Our decentralized cloud web application is built on the
+                        principles of a public blockchain and a peer-to-peer
+                        network.It enables users to securely store their data
+                        across a distributed network, eliminating reliance on
+                        centralized servers.At the same time, individuals can
+                        join the network as peer nodes by contributing storage
+                        space. In return, they are rewarded for their
+                        participation and for supporting the stability and
+                        growth of the network.
                       </p>
                       <div className="mt-6 flex justify-between items-center">
                         <button className="bg-gradient-to-r from-pink-600 to-blue-600 text-white px-4 py-2 rounded-md hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300">

@@ -89,6 +89,14 @@ export const techTags: TechTags[] = [
     ),
   },
   {
+    label: "Redis",
+    bgColor: "bg-red-600/20",
+    textColor: "text-red-600",
+    icon: (
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" />
+    ),
+  },
+  {
     label: "Tailwind",
     bgColor: "bg-sky-400/20",
     textColor: "text-sky-400",
@@ -194,6 +202,14 @@ export const techTags: TechTags[] = [
     ),
   },
   {
+    label: "Socket.io",
+    bgColor: "bg-green-600/20",
+    textColor: "text-green-600",
+    icon: (
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg" />
+    ),
+  },
+  {
     label: "NestJS",
     bgColor: "bg-red-500/20",
     textColor: "text-red-500",
@@ -228,7 +244,15 @@ export const techTags: TechTags[] = [
 ];
 
 export const categories = {
-  Languages: ["JavaScript", "TypeScript", "Python", "Java", "Go"],
+  Languages: [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Java",
+    "Go",
+    "HTML5",
+    "CSS3",
+  ],
   "Stacks & Libraries": [
     "React",
     "Next.js",
@@ -240,8 +264,9 @@ export const categories = {
     "Spring",
     "Django",
     "Arduino",
+    "Socket.io",
   ],
-  Databases: ["MongoDB", "PostgreSQL", "MySQL"],
+  Databases: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
   Tools: ["Git", "Docker", "Postman", "VSCode", "Linux"],
 };
 
