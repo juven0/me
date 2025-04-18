@@ -5,7 +5,6 @@ import {
   Github,
   Linkedin,
   Code,
-  Terminal,
   X,
   User,
   Activity,
@@ -15,7 +14,6 @@ import {
   ExternalLink,
   Award,
   BookOpen,
-  Coffee,
   Globe,
 } from "lucide-react";
 
@@ -24,6 +22,7 @@ import { projects } from "../data/projects";
 import ProjectCard from "../components/card";
 import { categories, getTechTagStyle } from "../data/skill";
 import nebula from "../assets/images/nebula.png";
+import me2 from "../assets/images/me2.jpg"
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -156,7 +155,7 @@ export default function Portfolio() {
                       currentPage === "home" ? "text-pink-500" : ""
                     }`}
                   >
-                    <Activity size={20} className="text-blue-400" /> Accueil
+                    <Activity size={20} className="text-blue-400" /> Home
                   </button>
                 </li>
                 <li className="transform hover:translate-x-2 transition-transform">
@@ -166,7 +165,7 @@ export default function Portfolio() {
                       currentPage === "projects" ? "text-pink-500" : ""
                     }`}
                   >
-                    <Briefcase size={20} className="text-pink-400" /> Projets
+                    <Briefcase size={20} className="text-pink-400" />  Projects
                   </button>
                 </li>
                 <li className="transform hover:translate-x-2 transition-transform">
@@ -176,7 +175,7 @@ export default function Portfolio() {
                       currentPage === "about" ? "text-pink-500" : ""
                     }`}
                   >
-                    <User size={20} className="text-purple-400" /> À propos
+                    <User size={20} className="text-purple-400" /> About
                   </button>
                 </li>
                 <li className="transform hover:translate-x-2 transition-transform">
@@ -198,14 +197,14 @@ export default function Portfolio() {
               onClick={() => changePage("projects")}
               className="text-white flex items-center space-x-2 hover:text-pink-300 transition-colors duration-300"
             >
-              <span>Projets</span>
+              <span>Projects</span>
               <ArrowRight size={16} className="animate-pulse" />
             </button>
             <button
               onClick={() => changePage("about")}
               className="text-white flex items-center space-x-2 hover:text-blue-300 transition-colors duration-300"
             >
-              <span>À propos</span>
+              <span>About</span>
               <User size={16} />
             </button>
             <button
@@ -237,25 +236,23 @@ export default function Portfolio() {
                 <div className="relative z-10">
                   <div className="font-[Orbitron] overflow-hidden">
                     <h1 className="text-white text-4xl md:text-6xl font-bold uppercase tracking-wide animate-slideUp">
-                      Développeur
+                    Full-stack 
                       <br />
                       <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
-                        Fullstack
+                      Developer
                       </span>
                     </h1>
                   </div>
                   <div className="overflow-hidden mt-2">
                     <p className="font-mono text-gray-300 text-lg animate-slideUp animation-delay-200">
-                      Créateur d'applications web et mobiles de haute qualité
+                    Creating reliable and refined web and mobile apps with a strong focus on user experience.
                     </p>
                   </div>
 
                   <div className="mt-6 max-w-md">
                     <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-blue-500 mb-6"></div>
                     <p className="font-mono text-gray-400 animate-fadeIn animation-delay-300">
-                      Spécialisé dans le développement d'applications modernes,
-                      performantes et évolutives. Passionné par les nouvelles
-                      technologies et l'innovation.
+                    I specialize in building modern, efficient, and scalable applications. I'm passionate about emerging technologies and innovation, with a focus on delivering reliable solutions tailored to real-world user needs.
                     </p>
                   </div>
                 </div>
@@ -268,14 +265,14 @@ export default function Portfolio() {
                     <ArrowRight />
                   </button>
                   <p className="font-[Orbitron] text-white self-center">
-                    Découvrir mon travail
+                  Explore my work 
                   </p>
                 </div>
 
                 {/* Technologies Section - Vertical */}
                 <div className="mt-12 relative z-10 flex flex-col items-center">
                   <p className="text-gray-300 mb-4 font-[Orbitron] font-medium">
-                    Technologies
+                  Technologies
                   </p>
                   <div className="font-mono flex flex-wrap gap-4">
                     {technologies.map((tech) => (
@@ -359,8 +356,7 @@ export default function Portfolio() {
                     Projets
                   </h3>
                   <p className="text-gray-300 text-sm mt-2">
-                    Découvrir mon portfolio de projets fullstack avec des
-                    technologies modernes
+                  Discover my fullstack project portfolio using modern technologies.
                   </p>
                   <div className="flex justify-end mt-4">
                     <ArrowRight
@@ -378,7 +374,7 @@ export default function Portfolio() {
             <div className="p-6 md:p-10 h-full animate-fadeInUp">
               <h1 className="text-white text-4xl font-bold uppercase tracking-wide mb-2">
                 <span className="font-[Orbitron] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
-                  Mes Projets
+                My Projects
                 </span>
               </h1>
               <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-blue-500 mb-8"></div>
@@ -392,7 +388,7 @@ export default function Portfolio() {
               {/* Featured Project */}
               <div className="mt-10">
                 <h2 className="text-white text-2xl font-bold mb-6">
-                  Projet en vedette
+                Featured Project
                 </h2>
                 <div className="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-800 hover:border-pink-500/40 transition-all duration-500">
                   <div className="md:flex">
@@ -464,7 +460,7 @@ export default function Portfolio() {
             <div className="font-mono p-6 md:p-10 h-full animate-fadeInUp">
               <h1 className="text-white text-4xl font-bold uppercase tracking-wide mb-2">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
-                  À Propos de Moi
+                About Me
                 </span>
               </h1>
               <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-blue-500 mb-8"></div>
@@ -474,27 +470,23 @@ export default function Portfolio() {
                 <div className="w-full md:w-2/3 text-white">
                   <div className="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-gray-800">
                     <p className="mb-4 text-lg">
-                      Développeur fullstack passionné avec une solide expérience
-                      dans la création d'applications web et mobiles modernes.
+                    Passionate fullstack developer with strong experience in building modern web and mobile applications.
+                    I handle the full development lifecycle—from backend logic to user interface design—ensuring seamless integration, performance optimization, and a user-centered approach. I’m driven by curiosity and committed to delivering innovative and scalable solutions.
                     </p>
 
                     <div className="h-1 w-16 bg-pink-500 my-6"></div>
 
                     <p className="mb-4">
-                      Je maîtrise plusieurs langages et technologies, ce qui me
-                      permet d'aborder les projets sous différents angles et de
-                      choisir les outils les plus adaptés à chaque besoin.
+                    I have strong proficiency in multiple languages and technologies, allowing me to approach each project with the most suitable strategy and select the tools best aligned with its goals and technical requirements.
                     </p>
                     <p className="mb-4">
-                      Mon objectif est de créer des solutions élégantes,
-                      performantes et évolutives qui répondent parfaitement aux
-                      besoins des utilisateurs.
+                    My goal is to design elegant, high-performance, and scalable solutions that are perfectly aligned with users' needs.
                     </p>
 
                     <div className="mt-8">
                       <h3 className="text-xl font-bold mb-6 flex items-center">
                         <Award size={20} className="text-pink-500 mr-2" />
-                        Compétences
+                        Skills
                       </h3>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -529,7 +521,7 @@ export default function Portfolio() {
                     <div className="mt-8">
                       <h3 className="text-xl font-bold mb-6 flex items-center">
                         <Award size={20} className="text-pink-500 mr-2" />
-                        Compétences
+                        Skills
                       </h3>
 
                       <div className="space-y-4">
@@ -609,14 +601,14 @@ export default function Portfolio() {
                     <div className="mt-10">
                       <h3 className="text-xl font-bold mb-6 flex items-center">
                         <BookOpen size={20} className="text-green-500 mr-2" />
-                        Formation
+                        Education
                       </h3>
 
                       <div className="bg-gray-800 bg-opacity-50 rounded-lg p-4 border-l-4 border-green-500">
-                        <h4 className="font-bold">Master en Informatique</h4>
+                        <h4 className="font-bold">Master's in Computer Science</h4>
                         <p className="text-gray-400">2019 - 2024 | ASJA</p>
                         <p className="text-sm mt-2">
-                          Spécialisation Genie Logiciel
+                        Software Engineering Specialization
                         </p>
                       </div>
                     </div>
@@ -629,7 +621,7 @@ export default function Portfolio() {
                     <div className="bg-gradient-to-br from-pink-600/30 to-blue-600/30 rounded-lg p-6 backdrop-blur-sm border border-gray-800">
                       <div className="w-full aspect-square rounded-xl bg-gray-800 border-4 border-pink-500 overflow-hidden mx-auto shadow-xl shadow-pink-500/20 hover:shadow-pink-500/40 transition-all duration-500 transform hover:scale-105">
                         <img
-                          src="/api/placeholder/400/400"
+                          src={me2}
                           alt="Votre photo"
                           className="w-full h-full object-cover"
                         />
@@ -642,7 +634,7 @@ export default function Portfolio() {
                         </div>
                         <div className="flex items-center gap-3 text-white">
                           <Briefcase className="text-blue-500" size={18} />
-                          <span>Développeur Fullstack</span>
+                          <span>Fullstack Developer</span>
                         </div>
                         <div className="flex items-center gap-3 text-white">
                           <Globe className="text-purple-500" size={18} />
@@ -652,7 +644,7 @@ export default function Portfolio() {
 
                       <div className="mt-6 pt-6 border-t border-gray-700">
                         <h4 className="text-white font-medium mb-4">
-                          Me contacter
+                        Contact me
                         </h4>
                         <div className="flex justify-between">
                           <a
@@ -688,7 +680,7 @@ export default function Portfolio() {
                           className="w-full bg-gradient-to-r from-pink-600 to-blue-600 text-white py-3 rounded-lg hover:from-pink-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 font-medium"
                         >
                           <Mail size={18} />
-                          <span>Contactez-moi</span>
+                          <span>Contact me</span>
                         </button>
                       </div>
                     </div>
@@ -713,13 +705,13 @@ export default function Portfolio() {
                   <form className="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-gray-800 shadow-lg">
                     <h3 className="text-white text-xl font-bold mb-6 flex items-center">
                       <Mail size={20} className="text-pink-500 mr-2" />
-                      Envoyez-moi un message
+                      Send me a message
                     </h3>
 
                     <div className="space-y-6">
                       <div>
                         <label className="block text-gray-400 mb-2 font-medium">
-                          Nom
+                          Name
                         </label>
                         <input
                           type="text"
@@ -739,13 +731,13 @@ export default function Portfolio() {
                       </div>
                       <div>
                         <label className="block text-gray-400 mb-2 font-medium">
-                          Sujet
+                        Subject
                         </label>
                         <select className="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-white focus:border-pink-500 outline-none transition-all duration-300 focus:shadow-md focus:shadow-pink-500/20 appearance-none">
-                          <option>Demande de projet</option>
-                          <option>Offre d'emploi</option>
+                          <option>Project Request</option>
+                          <option>Job Offer</option>
                           <option>Question</option>
-                          <option>Autre</option>
+                          <option>Other</option>
                         </select>
                       </div>
                       <div>
@@ -759,7 +751,7 @@ export default function Portfolio() {
                       </div>
                       <div>
                         <button className="w-full bg-gradient-to-r from-pink-600 to-blue-600 text-white p-4 rounded-lg hover:shadow-lg hover:shadow-pink-500/30 transform hover:translate-y-[-2px] transition-all duration-300 font-medium">
-                          Envoyer
+                        Send
                         </button>
                       </div>
                     </div>
@@ -771,7 +763,7 @@ export default function Portfolio() {
                   <div className="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-gray-800 shadow-lg">
                     <h3 className="text-white text-xl font-bold mb-6 flex items-center">
                       <Phone size={20} className="text-blue-500 mr-2" />
-                      Informations de contact
+                      Contact Information
                     </h3>
 
                     <div className="space-y-6">
@@ -790,7 +782,7 @@ export default function Portfolio() {
                           <Phone size={24} className="text-white" />
                         </div>
                         <div>
-                          <p className="text-gray-400 text-sm">Téléphone</p>
+                          <p className="text-gray-400 text-sm">Phone</p>
                           <p className="text-white">+261 34 76 249 88</p>
                         </div>
                       </div>
@@ -810,7 +802,7 @@ export default function Portfolio() {
                   {/* Social Media */}
                   <div className="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-gray-800 shadow-lg">
                     <h3 className="text-white text-xl font-bold mb-6">
-                      Réseaux sociaux
+                    Social Media
                     </h3>
 
                     <div className="grid grid-cols-2 gap-4">
@@ -869,7 +861,7 @@ export default function Portfolio() {
               currentPage === "home" ? "text-pink-500" : ""
             }`}
           >
-            Accueil
+            Home
             <div
               className={`absolute bottom-0 left-0 w-0 h-0.5 bg-pink-500 transition-all duration-300 group-hover:w-full ${
                 currentPage === "home" ? "w-full" : ""
@@ -882,7 +874,7 @@ export default function Portfolio() {
               currentPage === "projects" ? "text-pink-500" : ""
             }`}
           >
-            Projets
+            Projects
             <div
               className={`absolute bottom-0 left-0 w-0 h-0.5 bg-pink-500 transition-all duration-300 group-hover:w-full ${
                 currentPage === "projects" ? "w-full" : ""
@@ -895,7 +887,7 @@ export default function Portfolio() {
               currentPage === "about" ? "text-pink-500" : ""
             }`}
           >
-            À propos
+            About
             <div
               className={`absolute bottom-0 left-0 w-0 h-0.5 bg-pink-500 transition-all duration-300 group-hover:w-full ${
                 currentPage === "about" ? "w-full" : ""
