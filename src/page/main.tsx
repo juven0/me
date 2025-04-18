@@ -35,7 +35,9 @@ export default function Portfolio() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const changePage = (page) => {
+  type Page = "home" | "projects" | "about" | "contact";
+
+  const changePage = (page: Page) => {
     // Determine animation direction based on page "position"
     const pageOrder = ["home", "projects", "about", "contact"];
     const currentIndex = pageOrder.indexOf(currentPage);
@@ -113,8 +115,9 @@ export default function Portfolio() {
     if (currentPage === "about") {
       const skillBars = document.querySelectorAll(".skill-bar-fill");
       skillBars.forEach((bar, index) => {
+        const htmlBar = bar as HTMLElement; 
         setTimeout(() => {
-          bar.style.width = bar.getAttribute("data-width");
+          htmlBar.style.width = htmlBar.getAttribute("data-width") || "0";
         }, 300 + index * 200);
       });
     }
