@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div
           className={` ${
             !showDesc ? "opacity-0" : ""
-          } w-full h-full box-border p-2 absolute  bg-gradient-to-tr from-pink-600/90 to-blue-600/90  group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center`}
+          } w-full h-full box-border  backdrop-blur-sm p-2 absolute  bg-gradient-to-tr from-pink-600/90 to-blue-600/90  group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center`}
         >
           <p className="font-mono">{project.desc}</p>
         </div>

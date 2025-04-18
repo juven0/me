@@ -2,17 +2,17 @@ import { Project, TechTags } from "../types";
 import frontweek from "../assets/images/front-week.png";
 import codenexgen from "../assets/images/codenexgen.png";
 import transtab from "../assets/images/trans-mintab.png";
-import dididoc from "../assets/images/diddoc.png"
-import bluebox from "../assets/images/bluebox.png"
-import nebula from "../assets/images/nebula.png"
+import dididoc from "../assets/images/diddoc.png";
+import bluebox from "../assets/images/bluebox.png";
+import nebula from "../assets/images/nebula.png";
 
 export const projects: Project[] = [
   {
     name: "Cloud Decentraliser avec blockchain",
     tech: "React,Sass,Redux,Node.js,Express",
-    desc: "API RESTful haute performance pour applications e-commerce",
+    desc: "Our decentralized cloud web application is built on the principles of a public blockchain and a peer-to-peer network.It enables users to securely store their data across a distributed network, eliminating reliance on centralized servers.At the same time, individuals can join the network as peer nodes by contributing storage space. In return, they are rewarded for their participation and for supporting the stability and growth of the network.",
     color: "from-cyan-500 to-blue-600",
-    imageUrl: nebula
+    imageUrl: nebula,
   },
   {
     name: "Portfolio SPA",
@@ -25,32 +25,32 @@ export const projects: Project[] = [
     tech: "React, Sass, TypeScript, Redux, Nestjs",
     desc: "Conception et développement d'un système permettant le transfert sécurisé de fichiers entre différentes machines.Utilisation de NestJS pour la création de l'API côté serveur et de React pour le développement de l'interface utilisateur.",
     color: "from-green-500 to-emerald-600",
-    imageUrl: bluebox
+    imageUrl: bluebox,
   },
   {
     name: "Game Life",
     tech: "React,Tailwind,TypeScript,Socket.io,Node.js,Express ",
-    desc: "Application mobile pour la gestion financière personnelle",
+    desc: "An online game based on cellular automata, inspired by the work of mathematician John Horton Conway.Players can join game rooms to compete in a strategic challenge: starting from an initial population, each player aims to grow their automaton to achieve the largest final population. The game combines logic, strategy, and mathematical simulation in a competitive and interactive environment.",
     color: "from-amber-500 to-orange-600",
   },
   {
     name: "CodeNexGen",
     tech: "React,Tailwind,TypeScript,ChadcnUI",
-    desc: "Application mobile pour la gestion financière personnelle",
+    desc: "A modern and dynamic website designed to showcase our freelance brand, CodeNexGen.The site highlights our skills, services, and past projects through a clean, responsive, and user-friendly interface. It serves as a professional portfolio that reflects our expertise in web development and our commitment to quality.",
     color: "from-amber-500 to-orange-600",
     imageUrl: codenexgen,
   },
   {
     name: "Front-Week1",
     tech: "React,Sass",
-    desc: "API RESTful haute performance pour applications e-commerce",
+    desc: "A modern website developed as part of a front-end integration challenge.This project allowed me to apply my skills in responsive design, UI/UX fidelity, and user interface optimization. It showcases my ability to tackle technical challenges while adhering to modern front-end development standards.",
     color: "from-cyan-500 to-blue-600",
     imageUrl: frontweek,
   },
   {
     name: "Tansp-Mintab",
     tech: "React,Sass,ReactFlow",
-    desc: "API RESTful haute performance pour applications e-commerce",
+    desc: "A web interface built to leverage a custom-developed logistics optimization algorithm.The interface enables users to visualize and interact with the algorithm's results, supporting decision-making in complex logistics scenarios. This project combines algorithmic modeling with front-end development to deliver an intuitive and efficient solutio",
     color: "from-cyan-500 to-blue-600",
     imageUrl: transtab,
   },
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     tech: "Python,HTML5,CSS3,JavaScript,MySQL",
     desc: "Développement d’une plateforme pour le partage, lecture, discussion des livre numériques. Développement d’une intelligence artificielle pour la classification, suggestion des livres et des publications. Utilisation de Python, Flask, MySQL pour le développement du partie backend et du modèle de machine Learning. HTML, CSS et Javascript pour la partie frontend.",
     color: "from-pink-500 to-purple-600",
-    imageUrl: dididoc
+    imageUrl: dididoc,
   },
 ];
 
