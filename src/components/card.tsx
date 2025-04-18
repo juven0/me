@@ -36,7 +36,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className={` ${showDesc? "opacity-0": ""} w-full h-full box-border p-2 absolute  bg-gradient-to-tr from-pink-600/90 to-blue-600/90  group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center`}>
+        <div
+          className={` ${
+            !showDesc ? "opacity-0" : ""
+          } w-full h-full box-border p-2 absolute  bg-gradient-to-tr from-pink-600/90 to-blue-600/90  group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center`}
+        >
           <p className="font-mono">{project.desc}</p>
         </div>
         <div className="p-6">
@@ -79,8 +83,13 @@ export default function ProjectCard({ project }: { project: Project }) {
                 />
               </div>
             </div>
-            <button onClick={()=>{setShowDesc(true)}} className="bg-sky-500 hover:bg-sky-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300" >
-              Description
+            <button
+              onClick={() => {
+                setShowDesc(!showDesc);
+              }}
+              className="bg-sky-500 z-20  hover:bg-sky-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-400"
+            >
+              {showDesc ? "Close" : "Description"}
             </button>
           </div>
         </div>

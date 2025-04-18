@@ -22,6 +22,7 @@ import {
 import me from "../assets/images/me.jpg";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/card";
+import { categories, getTechTagStyle } from "../data/skill";
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,11 +54,41 @@ export default function Portfolio() {
   };
 
   const technologies = [
-    { name: "TypeScript", color: "bg-blue-400", icon: <Code size={16} /> },
-    { name: "JavaScript", color: "bg-yellow-400", icon: <Code size={16} /> },
-    { name: "Go", color: "bg-cyan-500", icon: <Terminal size={16} /> },
-    { name: "Java", color: "bg-red-500", icon: <Coffee size={16} /> },
-    { name: "C++", color: "bg-purple-500", icon: <Code size={16} /> },
+    {
+      name: "TypeScript",
+      color: "",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+      ),
+    },
+    {
+      name: "JavaScript",
+      color: "",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+      ),
+    },
+    {
+      name: "Go",
+      color: "",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
+      ),
+    },
+    {
+      name: "Java",
+      color: "",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+      ),
+    },
+    {
+      name: "Python",
+      color: "",
+      icon: (
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+      ),
+    },
   ];
 
   const skills = [
@@ -257,7 +288,7 @@ export default function Portfolio() {
                         <div
                           className={`w-8 h-8 rounded-full ${tech.color} flex items-center justify-center text-black font-bold transform hover:scale-110 transition-transform duration-300`}
                         >
-                          {tech.icon}
+                          <div className="w-6 h-6">{tech.icon}</div>
                         </div>
                         <span className="text-white text-sm">{tech.name}</span>
                       </div>
@@ -291,25 +322,31 @@ export default function Portfolio() {
                 </div>
 
                 {/* Social Media Icons */}
-                <div className="absolute right-6 top-1/7 flex flex-col space-y-6 text-white">
-                  <div className="p-2 bg-gray-900 bg-opacity-70 rounded-full backdrop-blur-sm hover:bg-pink-600 transition-all duration-300 cursor-pointer shadow-lg">
-                    <Github
-                      size={20}
-                      className="transform hover:rotate-12 transition-all duration-300"
-                    />
-                  </div>
-                  <div className="p-2 bg-gray-900 bg-opacity-70 rounded-full backdrop-blur-sm hover:bg-blue-600 transition-all duration-300 cursor-pointer shadow-lg">
-                    <Linkedin
-                      size={20}
-                      className="transform hover:rotate-12 transition-all duration-300"
-                    />
-                  </div>
-                  <div className="p-2 bg-gray-900 bg-opacity-70 rounded-full backdrop-blur-sm hover:bg-purple-600 transition-all duration-300 cursor-pointer shadow-lg">
-                    <Terminal
-                      size={20}
-                      className="transform hover:rotate-12 transition-all duration-300"
-                    />
-                  </div>
+                <div className="absolute right-6 top-1/3 flex flex-col space-y-6 text-white">
+                  <a
+                    href="https://github.com/juven0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="p-2 bg-gray-900 bg-opacity-70 rounded-full backdrop-blur-sm hover:bg-pink-600 transition-all duration-300 cursor-pointer shadow-lg">
+                      <Github
+                        size={20}
+                        className="transform hover:rotate-12 transition-all duration-300"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    href="www.linkedin.com/in/eddy-bocquelin-a9986a306"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="p-2 bg-gray-900 bg-opacity-70 rounded-full backdrop-blur-sm hover:bg-blue-600 transition-all duration-300 cursor-pointer shadow-lg">
+                      <Linkedin
+                        size={20}
+                        className="transform hover:rotate-12 transition-all duration-300"
+                      />
+                    </div>
+                  </a>
                 </div>
 
                 {/* Projects Teaser Box */}
@@ -418,7 +455,7 @@ export default function Portfolio() {
 
           {/* About Page */}
           {currentPage === "about" && (
-            <div className="p-6 md:p-10 h-full animate-fadeInUp">
+            <div className="font-mono p-6 md:p-10 h-full animate-fadeInUp">
               <h1 className="text-white text-4xl font-bold uppercase tracking-wide mb-2">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
                   À Propos de Moi
@@ -447,6 +484,40 @@ export default function Portfolio() {
                       performantes et évolutives qui répondent parfaitement aux
                       besoins des utilisateurs.
                     </p>
+
+                    <div className="mt-8">
+                      <h3 className="text-xl font-bold mb-6 flex items-center">
+                        <Award size={20} className="text-pink-500 mr-2" />
+                        Compétences
+                      </h3>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(categories).map(([category, techs]) => (
+                          <div
+                            key={category}
+                            className="border border-white/10 rounded-xl p-4 shadow-sm bg-white/5"
+                          >
+                            <h4 className="text-lg font-semibold mb-3 text-white">
+                              {category}
+                            </h4>
+                            <div className="flex flex-wrap gap-2">
+                              {techs.map((tech) => {
+                                const { bgColor, icon } = getTechTagStyle(tech);
+                                return (
+                                  <span
+                                    key={tech}
+                                    className={`flex items-center gap-1 text-ml font-medium ${bgColor} $ px-3 py-2 rounded-full`}
+                                  >
+                                    <div className="h-6 w-6">{icon}</div>
+                                    {tech}
+                                  </span>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
                     {/* Skills section */}
                     <div className="mt-8">
@@ -477,7 +548,8 @@ export default function Portfolio() {
                     </div>
 
                     {/* Experience timeline */}
-                    <div className="mt-10">
+
+                    {/* <div className="mt-10">
                       <h3 className="text-xl font-bold mb-6 flex items-center">
                         <Briefcase size={20} className="text-blue-500 mr-2" />
                         Expérience
@@ -525,7 +597,7 @@ export default function Portfolio() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Education */}
                     <div className="mt-10">
@@ -536,12 +608,9 @@ export default function Portfolio() {
 
                       <div className="bg-gray-800 bg-opacity-50 rounded-lg p-4 border-l-4 border-green-500">
                         <h4 className="font-bold">Master en Informatique</h4>
-                        <p className="text-gray-400">
-                          2014 - 2016 | Université de Technologie
-                        </p>
+                        <p className="text-gray-400">2019 - 2024 | ASJA</p>
                         <p className="text-sm mt-2">
-                          Spécialisation en développement web et applications
-                          mobiles
+                          Spécialisation Genie Logiciel
                         </p>
                       </div>
                     </div>
@@ -571,7 +640,7 @@ export default function Portfolio() {
                         </div>
                         <div className="flex items-center gap-3 text-white">
                           <Globe className="text-purple-500" size={18} />
-                          <span>Pari, France</span>
+                          <span>Antananarivo</span>
                         </div>
                       </div>
 
@@ -706,7 +775,7 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <p className="text-gray-400 text-sm">Email</p>
-                          <p className="text-white">contact@exemple.com</p>
+                          <p className="text-white">bocquelin@gmail.com</p>
                         </div>
                       </div>
 
@@ -716,7 +785,7 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <p className="text-gray-400 text-sm">Téléphone</p>
-                          <p className="text-white">+33 6 12 34 56 78</p>
+                          <p className="text-white">+261 34 76 249 88</p>
                         </div>
                       </div>
 
@@ -726,7 +795,7 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <p className="text-gray-400 text-sm">Localisation</p>
-                          <p className="text-white">Paris, France</p>
+                          <p className="text-white">Antananarivo</p>
                         </div>
                       </div>
                     </div>
@@ -740,7 +809,7 @@ export default function Portfolio() {
 
                     <div className="grid grid-cols-2 gap-4">
                       <a
-                        href="#"
+                        href="https://github.com/juven0"
                         className="flex items-center gap-3 bg-gray-800 rounded-lg p-4 border border-gray-700 hover:border-pink-500 transition-all duration-300 transform hover:translate-y-[-2px]"
                       >
                         <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
@@ -750,7 +819,7 @@ export default function Portfolio() {
                       </a>
 
                       <a
-                        href="#"
+                        href="www.linkedin.com/in/eddy-bocquelin-a9986a306"
                         className="flex items-center gap-3 bg-gray-800 rounded-lg p-4 border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:translate-y-[-2px]"
                       >
                         <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
@@ -759,7 +828,7 @@ export default function Portfolio() {
                         <span className="text-white">LinkedIn</span>
                       </a>
 
-                      <a
+                      {/* <a
                         href="#"
                         className="flex items-center gap-3 bg-gray-800 rounded-lg p-4 border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:translate-y-[-2px]"
                       >
@@ -777,7 +846,7 @@ export default function Portfolio() {
                           <Terminal size={20} className="text-white" />
                         </div>
                         <span className="text-white">Dev.to</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
