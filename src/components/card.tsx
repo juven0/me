@@ -74,15 +74,17 @@ export default function ProjectCard({ project }: { project: Project }) {
           <hr className="my-4 border-gray-200" />
 
           <div className="flex justify-between items-center mt-4 cursor-pointer">
-            <div className="   flex items-center ">
-              <span className="font-mono mx-1">Github</span>
-              <div className="p-2 bg-gray-900 bg-opacity-70 rounded-full backdrop-blur-sm hover:bg-pink-600 transition-all duration-300 cursor-pointer shadow-lg">
+           
+            
+            <a href={project.link} className=" flex items-center ">
+              <div className="p-2 bg-gray-900 bg-opacity-70 z-0 rounded-full backdrop-blur-sm hover:bg-pink-600 transition-all duration-300 cursor-pointer shadow-lg">
                 <Github
                   size={20}
                   className="transform hover:rotate-12 transition-all duration-300"
                 />
               </div>
-            </div>
+              </a>
+            
             <button
               onClick={() => {
                 setShowDesc(!showDesc);

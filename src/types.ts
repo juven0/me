@@ -4,6 +4,7 @@ export type Project = {
   desc: string;
   color: string;
   imageUrl?: string;
+  link?: string
 };
 
 export type TechTags = {

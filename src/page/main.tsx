@@ -28,7 +28,7 @@ export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [animationDirection, setAnimationDirection] = useState("right"); // 'left' or 'right'
+  const [animationDirection, setAnimationDirection] = useState("right");
   const pageHistory = useRef(["home"]);
 
   const toggleMenu = () => {
@@ -38,7 +38,6 @@ export default function Portfolio() {
   type Page = "home" | "projects" | "about" | "contact";
 
   const changePage = (page: Page) => {
-    // Determine animation direction based on page "position"
     const pageOrder = ["home", "projects", "about", "contact"];
     const currentIndex = pageOrder.indexOf(currentPage);
     const newIndex = pageOrder.indexOf(page);

@@ -14,6 +14,7 @@ export const projects: Project[] = [
     desc: "Our decentralized cloud web application is built on the principles of a public blockchain and a peer-to-peer network.It enables users to securely store their data across a distributed network, eliminating reliance on centralized servers.At the same time, individuals can join the network as peer nodes by contributing storage space. In return, they are rewarded for their participation and for supporting the stability and growth of the network.",
     color: "from-cyan-500 to-blue-600",
     imageUrl: nebula,
+    link:"https://github.com/juven0/numb.git"
   },
   //   {
   //     name: "Portfolio SPA",
@@ -27,6 +28,7 @@ export const projects: Project[] = [
     desc: "Conception et développement d'un système permettant le transfert sécurisé de fichiers entre différentes machines.Utilisation de NestJS pour la création de l'API côté serveur et de React pour le développement de l'interface utilisateur.",
     color: "from-green-500 to-emerald-600",
     imageUrl: bluebox,
+    link:"https://github.com/juven0/blue-box-front.git"
   },
   {
     name: "Game Life",
@@ -34,6 +36,7 @@ export const projects: Project[] = [
     desc: "An online game based on cellular automata, inspired by the work of mathematician John Horton Conway.Players can join game rooms to compete in a strategic challenge: starting from an initial population, each player aims to grow their automaton to achieve the largest final population. The game combines logic, strategy, and mathematical simulation in a competitive and interactive environment.",
     color: "from-amber-500 to-orange-600",
     imageUrl: gamelife,
+    link:"https://github.com/juven0/game-life.git"
   },
   {
     name: "CodeNexGen",
@@ -41,6 +44,7 @@ export const projects: Project[] = [
     desc: "A modern and dynamic website designed to showcase our freelance brand, CodeNexGen.The site highlights our skills, services, and past projects through a clean, responsive, and user-friendly interface. It serves as a professional portfolio that reflects our expertise in web development and our commitment to quality.",
     color: "from-amber-500 to-orange-600",
     imageUrl: codenexgen,
+    link:"https://github.com/juven0/CodeNexGen.git"
   },
   {
     name: "Front-Week1",
@@ -48,6 +52,7 @@ export const projects: Project[] = [
     desc: "A modern website developed as part of a front-end integration challenge.This project allowed me to apply my skills in responsive design, UI/UX fidelity, and user interface optimization. It showcases my ability to tackle technical challenges while adhering to modern front-end development standards.",
     color: "from-cyan-500 to-blue-600",
     imageUrl: frontweek,
+    link: "https://github.com/juven0/front-week1.git"
   },
   {
     name: "Tansp-Mintab",
@@ -55,6 +60,7 @@ export const projects: Project[] = [
     desc: "A web interface built to leverage a custom-developed logistics optimization algorithm.The interface enables users to visualize and interact with the algorithm's results, supporting decision-making in complex logistics scenarios. This project combines algorithmic modeling with front-end development to deliver an intuitive and efficient solutio",
     color: "from-cyan-500 to-blue-600",
     imageUrl: transtab,
+    link:"https://github.com/juven0/tansp_mintab.git"
   },
   {
     name: "Didi Doc",
@@ -62,6 +68,7 @@ export const projects: Project[] = [
     desc: "Développement d’une plateforme pour le partage, lecture, discussion des livre numériques. Développement d’une intelligence artificielle pour la classification, suggestion des livres et des publications. Utilisation de Python, Flask, MySQL pour le développement du partie backend et du modèle de machine Learning. HTML, CSS et Javascript pour la partie frontend.",
     color: "from-pink-500 to-purple-600",
     imageUrl: dididoc,
+    link: "https://github.com/juven0/didydoc.git"
   },
 ];
 
