@@ -350,7 +350,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Projects Teaser Box */}
-                <div className="absolute bottom-16 right-8 bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-6 w-72 hover:bg-opacity-90 transition-all duration-500 transform hover:-translate-y-2 border-t border-pink-500/30 shadow-xl">
+                {/* <div className="absolute bottom-16 right-8 bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-6 w-72 hover:bg-opacity-90 transition-all duration-500 transform hover:-translate-y-2 border-t border-pink-500/30 shadow-xl">
                   <div className="rounded-full w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 overflow-hidden mb-4 flex items-center justify-center animate-pulse-slow">
                     <Code size={32} className="text-white" />
                   </div>
@@ -366,7 +366,7 @@ export default function Portfolio() {
                       size={20}
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           )}
