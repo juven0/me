@@ -4,7 +4,7 @@ import {
   ArrowRight,
   Github,
   Linkedin,
-  Code,
+  // Code,
   X,
   User,
   Activity,
